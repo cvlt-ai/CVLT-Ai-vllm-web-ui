@@ -56,8 +56,8 @@ All dependencies are listed in `requirements.txt`. Key packages include:
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd vllm-gradio-webui
+git clone https://github.com/cvlt-ai/CVLT-Ai-vllm-web-ui
+cd CVLT-Ai-vllm-gradio-webui
 ```
 
 ### 2. Create Virtual Environment (Recommended)
@@ -365,6 +365,8 @@ For issues, questions, or contributions:
 - Review the configuration documentation
 
 ---
+
+For reference testing has been done on a dual gpu system: 1x A6000 Ada & 1x L40 . I am getting about 96-101 toks/s on average having the KV cache stored on gpus, running Qwen 3 30b int8 model with a context size of about 119k. Please let me know of any bugs and I will try to get to them in a timely manner. I HAVE NOT TESTED THIS AT ALL FOR WINDOWS. 
 
 
 
