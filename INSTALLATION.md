@@ -34,12 +34,10 @@ Download and install CUDA from [NVIDIA's website](https://developer.nvidia.com/c
 ### Step 1: Clone or Download the Project
 ```bash
 # If using git
-git clone <repository-url>
-cd vllm-gradio-webui
+git clone https://github.com/cvlt-ai/CVLT-Ai-vllm-web-ui
+cd CVLT-Ai-vllm-web-ui
 
-# Or extract the downloaded ZIP file
-unzip vllm-gradio-webui.zip
-cd vllm-gradio-webui
+
 ```
 
 ### Step 2: Create Virtual Environment (Recommended)
@@ -272,7 +270,7 @@ python main.py --pipeline-parallel-size 4
 nvidia-smi
 ```
 
-## 📊Monitoring
+## Monitoring
 
 ### System Monitoring
 The web interface includes:
