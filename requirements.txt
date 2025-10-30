@@ -1,6 +1,6 @@
 # Core dependencies
 gradio>=4.0.0
-vllm>=0.10.0
+https://vllm-wheels.s3.us-west-2.amazonaws.com/nightly/vllm-1.0.0.dev-cp38-abi3-manylinux1_x86_64.whl  # Experimental nightly version with latest features
 torch>=2.0.0
 transformers>=4.30.0
 huggingface_hub>=0.16.0

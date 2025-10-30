@@ -169,6 +169,11 @@ class VLLMManager:
         
         return None
     
+    def _has_existing_quantization(self, engine_args, model_config):
+        """Check if engine_args or model_config has quantization settings."""
+        return any(key in engine_args for key in ["quantization", "bits"]) or \
+               model_config.get("quantization", None) is not None
+
     def _prepare_engine_args(self, model_path: str, user_config: Dict[str, Any] = None) -> Dict[str, Any]:
         """Prepare arguments for vLLM engine initialization"""
         user_config = user_config or {}
@@ -239,9 +244,12 @@ class VLLMManager:
         if 'gpu_memory_utilization' in user_config:
             args['gpu_memory_utilization'] = user_config['gpu_memory_utilization']
         
-        # Quantization settings
-        if 'quantization' in user_config:
-            args['quantization'] = user_config['quantization']
+        # Quantization settings - only add default quantization if none exists
+        if not self._has_existing_quantization(args, user_config):
+            if 'quantization' in user_config:
+                args['quantization'] = user_config['quantization']
+            elif 'bits' in user_config:
+                args['bits'] = user_config['bits']
         
         # Performance settings
         if 'enforce_eager' in user_config:
