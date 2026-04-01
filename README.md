@@ -1,3 +1,19 @@
+# ⚠️ DEPRECATED: CVLT AI vLLM Gradio WebUI (Original)
+
+> **This repository is deprecated.** Please use [CVLT-AI-VLLM-WEB-UI-2.0](https://github.com/cvlt-ai/CVLT-AI-VLLM-WEB-UI-2.0) instead.
+>
+> **Why version 2.0 is better:**
+> - 🚀 **vLLM Nightly Support** - Latest experimental features
+> - 🎨 **Enhanced UI** - Improved Gradio interface with better theming
+> - 🔧 **Better Architecture** - Modular design with cleaner codebase
+> - 📦 **More Features** - Additional RAG options, web scraping improvements
+> - 🐳 **Docker Support** - Easy containerized deployment
+> - 🔄 **Active Development** - Regular updates and bug fixes
+
+---
+
+## Original Description
+
 # CVLT AI vLLM Gradio WebUI
 
 A comprehensive web-based interface for vLLM with advanced features including multi-GPU support, RAG capabilities, web scraping, file processing, and more.
